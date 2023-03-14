@@ -1,9 +1,6 @@
 version: 2
-
 # api_key: <KEY>
-
 # authtoken: <TOKEN>
-
 tunnels:
   inspect:
     proto: http
