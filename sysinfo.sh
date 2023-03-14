@@ -1,5 +1,8 @@
 #!/bin/bash
 
+KERNEL=cat /etc/issue
+echo=${KERNEL::-6}
+
 echo -e "\033[1;32m SYSTEM \033[0m"
 uname -nrpv
 
@@ -22,17 +25,15 @@ echo "Useful commands"
 docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}\t{{.ID}}\t{{.Image}}\t{{.Size}}" | sort
 echo docker rm -f $(docker ps -aq) # Remove all Docker containers
 echo
-echo CTRL+Z: Put the running process in background
-echo jobs: List the processes running in background
-echo fg "%<n>": Recall the <n>th process in background to foreground
+echo "CTRL+Z: Put the running process in background"
+echo "jobs: List the processes running in background"
+echo "fg \"%<n>\": Recall the <n>th process in background to foreground"
 echo
-echo sudo nc -l <port>	Open a local socket on a specific port
-echo telnet <host> <post>	Connect to a remote socket on a specific port
+echo "sudo nc -l <port>	Open a local socket on a specific port"
+echo "telnet <host> <post>	Connect to a remote socket on a specific port"
 echo
-echo Kernel
-cat /etc/issue
 echo Users
-sudo cat /etc/passwd | grep 1000	Show who is the user with UID=1000
+sudo cat /etc/passwd
 echo Processes
 ps acrux
 
