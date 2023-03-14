@@ -2,31 +2,11 @@
 
 # Source: https://docs.docker.com/engine/install/ubuntu/#installation-methods
 
-# Create RSA keys with: ssh-keygen
-
-# Change root password
-
-# Enable SSH with private key
-nano .ssh/authorized_keys # add "ssh-rsa...." 
-nano /etc/ssh/sshd_config # modify "PasswordAuthentication no"
-mv /etc/ssh/sshd_config.d/50-cloud-init.conf /etc/ssh/sshd_config.d/50-cloud-init.conf.bak
-# systemctl restart ssh.service
-service ssh restart 
-
-# (Optional) Add normal user
-adduser ubuntu
-usermod -aG sudo ubuntu
-su ubuntu
-mkdir .ssh
-sudo cp /root/.ssh/authorized_keys .ssh
-
-# Update repositories and system
-apt update && apt upgrade -y
-
-# Uninstall already installed Docker
+# Uninstall old versions
 apt remove docker docker-engine docker.io containerd runc
 
-# Setup Docker repository
+# Setup the repository
+apt update
 apt install \
     ca-certificates \
     curl \
@@ -43,15 +23,15 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 apt update
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Running Docker as normal user
-# groupadd docker
-# usermod -aG docker $USER
-usermod -aG docker root
+# Manage Docker as a non-root user
+# groupadd docker # (already created in Ubuntu)
+usermod -aG docker $USER # root
 usermod -aG docker ubuntu
-newgrp docker
+newgrp docker # activate the changes to groups
+# systemctl restart docker.service
 service docker restart
 
-# (Default in Ubuntu) Start Docker on boot 
+# Configure Docker to start on boot with systemd # (already set in Ubuntu) 
 # systemctl enable docker.service
 # systemctl enable containerd.service
 
@@ -61,5 +41,9 @@ service docker restart
 
 # Verify installations
 docker info
-systemctl status docker.service
-echo If Docker daemon is not started, run \"sudo reboot\". 
+# systemctl status docker.service
+service docker status
+
+echo Press Enter to reboot, CTRL+C to terminate...
+read key
+reboot 
