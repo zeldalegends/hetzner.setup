@@ -1,6 +1,6 @@
 version: 2
-# api_key: <KEY>
-# authtoken: <TOKEN>
+api_key: 2Mzl7JvZ6ywPjhAufZc3WiTXgbm_7rwUSZdqLErjfW2mtRD3v
+authtoken: 2Mzg7mT5Xdbb4VCQ3VvtpE4kNrA_6W8eMDEddVRVEqZtrhF9i
 tunnels:
   inspect:
     proto: http
