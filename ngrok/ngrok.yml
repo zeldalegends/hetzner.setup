@@ -4,10 +4,16 @@ version: 2
 tunnels:
   inspect:
     proto: http
-    addr: localhost:4040
-  adminer:
+    addr: 4040
+# adminer:
+#   proto: http
+#   addr: adminer:8080
+# mongoExpress:
+#   proto: http
+#   addr: mongo-express:8081
+  geth:
     proto: http
-    addr: adminer:8080
-  mongoExpress:
+    addr: ethereum-geth:7396
+  node-red:
     proto: http
-    addr: mongo-express:8081
+    addr: node-red:1880
