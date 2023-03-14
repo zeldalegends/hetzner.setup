@@ -1,0 +1,16 @@
+version: 2
+
+# api_key: <KEY>
+
+# authtoken: <TOKEN>
+
+tunnels:
+  inspect:
+    proto: http
+    addr: localhost:4040
+  adminer:
+    proto: http
+    addr: adminer:8080
+  mongoExpress:
+    proto: http
+    addr: mongo-express:8081
