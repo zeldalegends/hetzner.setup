@@ -40,10 +40,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Docker Engine
+apt update
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Running Docker as normal user
-groupadd docker
+# groupadd docker
 # usermod -aG docker $USER
 usermod -aG docker root
 usermod -aG docker ubuntu
