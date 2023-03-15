@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it --rm --name=ngrok --network=testnet -v $(pwd)/ngrok.yml:/etc/ngrok.yml -e NGROK_CONFIG=/etc/ngrok.yml ngrok/ngrok:latest start --all
+docker run -it --rm --name ngrok --network testnet -e NGROK_AUTHTOKEN=2Mzg7mT5Xdbb4VCQ3VvtpE4kNrA_6W8eMDEddVRVEqZtrhF9i ngrok/ngrok:latest http node-red:1880

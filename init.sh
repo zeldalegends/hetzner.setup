@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# For Ubuntu 22.042 LTS (Hetzner Cloud)
+
 # Create RSA keys with: ssh-keygen
-# Access the server: ssh root@<IP> -o ServerAliveInterval=240
+# Access the server: ssh root@<IP> -o ServerAliveInterval=100
 # Change root password and save it
 
 # Update repositories and system
