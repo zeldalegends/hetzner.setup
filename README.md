@@ -3,8 +3,8 @@
 2. Clone this repo: ``git clone https://github.com/alinonet/hetzner.setup``.
 3. Setup the server: ``./hetzner.setup/init.sh``.
 4. Setup Docker Engine: ``./hetzner.setup/docker/install.sh``.
-5. OPTIONAL Build and start any ***container***: ``./hetzner.setup/<container>/run.sh``.
-6. OPTIONAL Install and run any ***program***: ``./hetzner.setup/<program>/install.sh``.
+5. OPTIONAL Build and run the desired *program* as Docker container: ``./hetzner.setup/<program>/run.sh``.
+6. OPTIONAL **(NOT RECOMMENDED)** Install and start the desired *program* as standard process: ``./hetzner.setup/<program>/install.sh``.
 ## Tested versions
 - Ubuntu 22.04.2 LTS
 ## License
