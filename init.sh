@@ -2,15 +2,15 @@
 
 # For Ubuntu 22.042 LTS (Hetzner Cloud)
 
-# Create RSA keys with: ssh-keygen
+# Create RSA keys, e.g., with: ssh-keygen -f <filename>
 # Access the server: ssh root@<IP> -o ServerAliveInterval=100
-# Change root password and save it
+# Change root password
 
 # Update repositories and system
 apt update && apt upgrade -y
 
 # Enable SSH with private key
-echo Press Enter and add your private key ("ssh-rsa...") && read key
+echo Press Enter and add the private key ("ssh-rsa...") && read key
 nano .ssh/authorized_keys # add "ssh-rsa..."
 echo Press Enter and modify "PasswordAuthentication no" && read key
 nano /etc/ssh/sshd_config # modify "PasswordAuthentication no"
