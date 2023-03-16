@@ -14,7 +14,7 @@ ssh-keygen
 rem # Copy the public key (to the server)
 rem # Under WSL: ssh-copy-id [-i %filepath%] root@%serverip%
 rem # type %filepath%.pub | ssh root@%serverip% "cat >> .ssh/authorized_keys"
-type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@<serverip> "cat >> .ssh/authorized_keys"
+type $env:USERPROFILE\.ssh\id_rsa.pub | ssh root@%serverip% "cat >> .ssh/authorized_keys"
 
 rem # Access the server without password
 ssh root@%serverip% -o ServerAliveInterval=100
