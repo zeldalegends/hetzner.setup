@@ -24,7 +24,7 @@ visudo -f /etc/sudoers.d/90-cloud-init-users # add "ubuntu ALL=(ALL) NOPASSWD:AL
 mkdir /home/ubuntu/.ssh
 cp /root/.ssh/authorized_keys /home/ubuntu/.ssh
 chown -R ubuntu:ubuntu /home/ubuntu/.ssh
-
+cd /home/ubuntu/.ssh
 su ubuntu
 
 # Tested on Ubuntu 22.04.2 LTS
