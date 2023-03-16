@@ -26,7 +26,6 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 # Manage Docker as a non-root user
 # groupadd docker # (already created in Ubuntu)
 sudo adduser $USER docker # sudo usermod -aG docker $USER
-sudo adduser ubuntu docker # sudo usermod -aG docker ubuntu
 newgrp docker # activate the changes to groups
 sudo service docker restart # sudo systemctl restart docker.service
 
