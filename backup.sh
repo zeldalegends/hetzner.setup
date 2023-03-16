@@ -1,14 +1,8 @@
 #!/bin/bash
 
 echo -e "\033[1;36mBackup folder: $(pwd)\033[0m"
-read -p "Do you want to proceed? (y/n) " yn
-case $yn in
-        [yY] ) echo Ok, backup started.;
-                break;;
-        [nN] ) echo Exiting...;
-                exit;;
-        * ) echo Default behaviour. Backup started.;;
-esac
+read -n 1 -p "Do you want to proceed? [Y/n] " key && [[ -z $key ]] && echo
+[[ $key =~ [nN] ]] && exit
 tar czvf $(basename $(pwd))_$(date +%Y%m%d%H%M%S).tar.gz .
 mkdir public-tmp
 mv $(basename $(pwd))*.tar.gz public-tmp/

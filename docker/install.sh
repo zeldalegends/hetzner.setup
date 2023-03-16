@@ -3,47 +3,46 @@
 # Source: https://docs.docker.com/engine/install/ubuntu/#installation-methods
 
 # Uninstall old versions
-apt remove docker docker-engine docker.io containerd runc
+sudo apt remove docker docker-engine docker.io containerd runc
 
 # Setup the repository
-apt update
-apt install \
+sudo apt update
+sudo apt install \
     ca-certificates \
     curl \
     gnupg \
     lsb-release
 
-mkdir -m 0755 -p /etc/apt/keyrings
+sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Docker Engine
-apt update
-apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Manage Docker as a non-root user
 # groupadd docker # (already created in Ubuntu)
-usermod -aG docker $USER # root
-usermod -aG docker ubuntu
+sudo adduser $USER docker # sudo usermod -aG docker $USER
+sudo adduser ubuntu docker # sudo usermod -aG docker ubuntu
 newgrp docker # activate the changes to groups
-# systemctl restart docker.service
-service docker restart
+sudo service docker restart # sudo systemctl restart docker.service
 
 # Configure Docker to start on boot with systemd # (already set in Ubuntu) 
-# systemctl enable docker.service
-# systemctl enable containerd.service
+# sudo systemctl enable docker.service
+# sudo systemctl enable containerd.service
 
 # Disable start Docker on boot
-# systemctl disable docker.service
-# systemctl disable containerd.service
+# sudo systemctl disable docker.service
+# sudo systemctl disable containerd.service
 
 # Verify installations
 docker info
 # systemctl status docker.service
-service docker status
+sudo service docker status
 
 echo Press Enter to reboot, CTRL+C to terminate...
 read key
-reboot 
+sudo reboot 

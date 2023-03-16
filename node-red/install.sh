@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Node.js and Node-RED
-sudo apt install build-essential git # curl
+sudo apt install build-essential git curl
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 echo
 echo ---------------------------
