@@ -16,6 +16,9 @@ service ssh restart # systemctl restart ssh.service
 # Fix locale settings
 localectl set-locale C.UTF-8
 
+read -n 1 -p "Add the user 'ubuntu'? [Y/n] " key && [[ -z $key ]] && echo
+[[ $key =~ [nN] ]] && exit
+
 # (Optional) Add a normal user with sudo priviledges and SSH access
 adduser ubuntu
 adduser ubuntu sudo # usermod -aG sudo ubuntu
