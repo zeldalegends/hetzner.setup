@@ -3,7 +3,7 @@
 echo -e "\033[1;32mSYSTEM INFORMATION \033[0m"
 KERNEL=$(sudo cat /etc/issue)
 echo ${KERNEL::-6}
-echo IP: $(curl -s https://ifconfig.me)
+echo IP: $(curl -s http://whatismyip.akamai.com/) # https://ifconfig.me 
 uname -nrpv
 echo
 echo -e "\033[1;33mCPU \033[0m"
@@ -19,7 +19,7 @@ read key
 clear
 
 echo -e "\033[1;36mDOCKER CONTAINERS \033[0m"
-docker ps -a --format "table {{.Names}}\t{{.ID}}\t{{.Status}}\t{{.Ports}}\t{{.Image}}" | sort # LC_COLLATE=C sort
+docker ps -a --format "table {{.Names}}\t{{.Ports}}\t{{.Image}}\t{{.Status}}\t{{.ID}}" | sort # LC_COLLATE=C sort
 echo
 echo -e "\033[1;30mPORTS \033[0m"
 lsof -i -P -n | grep LISTEN # ss -tunlp
