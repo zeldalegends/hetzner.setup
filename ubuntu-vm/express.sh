@@ -5,7 +5,7 @@ docker build . -t ubuntu/node
 PORT=49016
 
 tput setaf 11 # yellow
-echo Server running at: http://$(curl -s ifconfig.me):$PORT
+echo Server running at: http://$(curl -s http://whatismyip.akamai.com/):$PORT # alternative: http://ifconfig.me/
 tput sgr0 # normal text
 
 docker run -it --rm \

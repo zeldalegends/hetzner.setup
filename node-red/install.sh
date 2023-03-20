@@ -15,10 +15,10 @@ echo ---------------------------
 echo
 
 # Start on boot
-sudo systemctl enable nodered.service
+sudo nodered enable # sudo systemctl enable nodered.service
 
 # Disable start on boot
-# sudo systemctl disable nodered.service
+# sudo nodered disable # sudo systemctl disable nodered.service
 
 # Verify installations
 node -v

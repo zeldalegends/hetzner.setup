@@ -6,6 +6,7 @@
 5. OPTIONAL Build and run a *program* as Docker container: ``./hetzner.setup/<program>/run.sh``.
 6. OPTIONAL **(NOT RECOMMENDED)** Install and start a standard *program*: ``./hetzner.setup/<program>/install.sh``.
 ## Tested versions
+- Ubuntu 20.04.6 LTS
 - Ubuntu 22.04.2 LTS
 ## License
 Copyright (C) Alerox, 2023
