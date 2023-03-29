@@ -3,7 +3,7 @@
 echo -e "\033[1;32mSYSTEM INFORMATION \033[0m"
 KERNEL=$(sudo cat /etc/issue)
 echo ${KERNEL::-6}
-echo IP: $(curl -s http://whatismyip.akamai.com/) # https://ifconfig.me 
+echo IP: $(curl -s http://whatismyip.akamai.com/) # https://ifconfig.me # https://ipinfo.io/ip
 uname -nrpv
 echo
 echo -e "\033[1;33mCPU \033[0m"
