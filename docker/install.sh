@@ -39,8 +39,7 @@ sudo service docker restart # sudo systemctl restart docker.service
 
 # Verify installations
 docker info
-# systemctl status docker.service
-sudo service docker status
+sudo service docker status # systemctl status docker.service
 
 echo Press Enter to reboot, CTRL+C to terminate...
 read key

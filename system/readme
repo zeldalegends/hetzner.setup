@@ -1,0 +1,24 @@
+# Run a virtual terminal
+tmux
+
+# Detach from terminal
+CTRL+D (CTRL+B + D)
+
+# List sessions
+tmux ls (tmux list-sessions)
+
+# Restore in foreground
+tmux a [-t session-number] (tmux attach)
+
+# Kill session (N = 0, 1, 2, ...)
+tmux kill-session -t session-number
+or
+tmux a [-t session-number]
+CTRL+X y (CTRL+B X y)
+
+# Copy file to a remote server
+scp -i rsa-path file(s) root@95.216.154.146:dest-path
+scp -i rsa-path file(s) root@95.217.134.205:dest-path
+scp -i rsa-path file(s) root@135.181.148.177:dest-path
+
+e.g., scp -i /root/system/rsa.pem apps/* root@95.217.134.205:/home/ubuntu/apps

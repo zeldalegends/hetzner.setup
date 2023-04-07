@@ -1,0 +1,71 @@
+ * ABOUT        XMRig/6.19.0-mo1 gcc/9.3.1
+ * LIBS         libuv/1.44.2 OpenSSL/1.1.1s hwloc/2.9.0
+ * HUGE PAGES   supported
+ * 1GB PAGES    disabled
+ * CPU          Intel Xeon Processor (Skylake, IBRS) (1) 64-bit AES VM
+                L2:32.0 MB L3:16.0 MB 8C/8T NUMA:1
+ * MEMORY       12.3/30.6 GB (40%)
+                DIMM 0: 16 GB RAM @ 0 MHz DIMM 0
+                DIMM 1: 15 GB RAM @ 0 MHz DIMM 1
+ * MOTHERBOARD  Hetzner - vServer
+ * DONATE       0%
+ * ASSEMBLY     auto:intel
+ * POOL #1      gulf.moneroocean.stream:10128 algo auto
+ * COMMANDS     hashrate, pause, resume, results, connection
+ * OPENCL       disabled
+ * CUDA         disabled
+[2023-03-22 15:02:05.779]  config   configuration saved to: "/root/moneroocean/config.json"
+[2023-03-22 15:02:05.779]  benchmk   STARTING ALGO PERFORMANCE CALIBRATION (with 20 seconds round) 
+[2023-03-22 15:02:05.779]  benchmk   Algo ghostrider Preparation 
+[2023-03-22 15:02:05.783]  msr      cannot read MSR 0x000001a4
+[2023-03-22 15:02:05.783]  msr      FAILED TO APPLY MSR MOD, HASHRATE WILL BE LOW
+[2023-03-22 15:02:06.774]  cpu      use profile  ghostrider  (8 threads) scratchpad 2048 KB
+[2023-03-22 15:02:06.936]  cpu      GhostRider algo 1: cn/dark (512 KB)
+[2023-03-22 15:02:06.936]  cpu      GhostRider algo 2: cn/fast (2 MB)
+[2023-03-22 15:02:06.936]  cpu      GhostRider algo 3: cn/turtle (256 KB)
+[2023-03-22 15:02:06.980]  cpu      READY threads 8/8 (64) huge pages 100% 64/64 memory 131072 KB (206 ms)
+[2023-03-22 15:02:07.558]  benchmk   Algo ghostrider Starting test 
+[2023-03-22 15:02:30.068]  benchmk   Algo ghostrider hashrate: 606.162230 
+[2023-03-22 15:02:30.069]  benchmk   Algo cn/r Preparation 
+[2023-03-22 15:02:30.146]  cpu      stopped (77 ms)
+[2023-03-22 15:02:30.146]  cpu      use profile  cn/2  (8 threads) scratchpad 2048 KB
+[2023-03-22 15:02:30.960]  benchmk   Algo cn/r Starting test 
+[2023-03-22 15:02:31.041]  cpu      READY threads 8/8 (8) huge pages 100% 8/8 memory 16384 KB (895 ms)
+[2023-03-22 15:02:51.123]  benchmk   Algo cn/r hashrate: 347.497639 
+[2023-03-22 15:02:51.123]  benchmk   Algo cn-lite/1 Preparation 
+[2023-03-22 15:02:51.152]  cpu      stopped (28 ms)
+[2023-03-22 15:02:51.152]  cpu      use profile  cn-lite  (8 threads) scratchpad 1024 KB
+[2023-03-22 15:02:51.173]  benchmk   Algo cn-lite/1 Starting test 
+[2023-03-22 15:02:51.178]  cpu      READY threads 8/8 (8) huge pages 100% 8/8 memory 8192 KB (26 ms)
+[2023-03-22 15:03:06.540]  miner    speed 10s/60s/15m 1296.5 n/a n/a H/s max 1299.9 H/s
+[2023-03-22 15:03:11.176]  benchmk   Algo cn-lite/1 hashrate: 1320.113314 
+[2023-03-22 15:03:11.177]  benchmk   Algo cn-heavy/xhv Preparation 
+[2023-03-22 15:03:11.198]  msr      cannot read MSR 0x000001a4
+[2023-03-22 15:03:11.199]  msr      FAILED TO APPLY MSR MOD, HASHRATE WILL BE LOW
+[2023-03-22 15:03:11.204]  cpu      stopped (5 ms)
+[2023-03-22 15:03:11.204]  cpu      use profile  cn-heavy  (4 threads) scratchpad 4096 KB
+[2023-03-22 15:03:11.317]  cpu      READY threads 4/4 (4) huge pages 100% 8/8 memory 16384 KB (113 ms)
+[2023-03-22 15:03:11.342]  benchmk   Algo cn-heavy/xhv Starting test 
+[2023-03-22 15:03:31.367]  benchmk   Algo cn-heavy/xhv hashrate: 116.545703 
+[2023-03-22 15:03:31.368]  benchmk   Algo cn-pico Preparation 
+[2023-03-22 15:03:31.393]  cpu      stopped (25 ms)
+[2023-03-22 15:03:31.393]  cpu      use profile  cn-pico  (8 threads) scratchpad 256 KB
+[2023-03-22 15:03:31.407]  benchmk   Algo cn-pico Starting test 
+[2023-03-22 15:03:31.412]  cpu      READY threads 8/8 (16) huge pages 100% 8/8 memory 4096 KB (19 ms)
+[2023-03-22 15:03:51.409]  benchmk   Algo cn-pico hashrate: 7141.595711 
+[2023-03-22 15:03:51.410]  benchmk   Algo cn/ccx Preparation 
+[2023-03-22 15:03:51.413]  cpu      stopped (3 ms)
+[2023-03-22 15:03:51.413]  cpu      use profile  cn  (8 threads) scratchpad 2048 KB
+[2023-03-22 15:03:52.294]  benchmk   Algo cn/ccx Starting test 
+[2023-03-22 15:03:52.301]  cpu      READY threads 8/8 (8) huge pages 100% 8/8 memory 16384 KB (888 ms)
+[2023-03-22 15:04:06.663]  miner    speed 10s/60s/15m 671.3 n/a n/a H/s max 671.3 H/s
+[2023-03-22 15:04:12.295]  benchmk   Algo cn/ccx hashrate: 663.417191 
+[2023-03-22 15:04:12.295]  benchmk   Algo cn/gpu Preparation 
+[2023-03-22 15:04:12.467]  benchmk   Algo cn/gpu Starting test 
+[2023-03-22 15:04:32.744]  benchmk   Algo cn/gpu hashrate: 46.619532 
+[2023-03-22 15:04:32.744]  benchmk   Algo argon2/chukwav2 Preparation 
+[2023-03-22 15:04:32.745]  cpu      use argon2 implementation AVX-512F
+[2023-03-22 15:04:32.901]  cpu      stopped (156 ms)
+[2023-03-22 15:04:32.901]  cpu      use profile  argon2  (8 threads) scratchpad 1024 KB
+[2023-03-22 15:04:32.911]  cpu      READY threads 8/8 (8) huge pages 100% 8/8 memory 8192 KB (9 ms)
+[2023-03-22 15:04:32.912]  benchmk   Algo argon2/chukwav2 Starting test 

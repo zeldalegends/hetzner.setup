@@ -18,5 +18,5 @@ echo -e "\033[0;33mDecript and uncompress: openssl aes-256-cbc -d -in $FILENAME.
 echo Press Enter to stop the Apache server and delete files...
 read key
 docker stop apache-tmp_$FILENAME
-docker rm apache-tmp_$FILENAME
+# docker rm apache-tmp_$FILENAME
 sudo rm -r public-tmp_$FILENAME
