@@ -1,4 +1,4 @@
-# Setup Server in Hetzner Cloud (Ubuntu 22.04)
+# Setup Server in Hetzner Cloud (Ubuntu)
 1. Start a new server in [Hetzner Cloud Console](https://console.hetzner.cloud/)
 2. Clone this repo: ``git clone https://github.com/alinonet/hetzner.setup``.
 3. Setup the server: ``./hetzner.setup/start.sh``.
