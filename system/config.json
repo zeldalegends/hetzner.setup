@@ -18,7 +18,7 @@
         "init": -1,
         "init-avx2": -1,
         "mode": "auto",
-        "1gb-pages": false,
+        "1gb-pages": true,
         "rdmsr": true,
         "wrmsr": true,
         "cache_qos": false,
@@ -104,6 +104,10 @@
     "donate-over-proxy": 0,
     "pools": [
         {
+            "url": "95.217.134.205:3333",
+            "rig-id": "hznX"
+        },
+        {
             "algo": null,
             "coin": null,
             "url": "stratum+tcp://rx-eu.unmineable.com:3333",
@@ -115,6 +119,23 @@
             "enabled": true,
             "tls": false,
             "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": null,
+            "self-select": null,
+            "submit-to-origin": false
+        },
+        {
+            "algo": null,
+            "coin": null,
+            "url": "95.179.241.203:80",
+            "user": "84rnsoknJKsisf6ExBnFPfKfu2W1VnHv6W8oRQmQvHR1hGd347HUyAdJQuEFcbxmzJM4pMkxqhrZBhStSmPZgh8Q51pjjyZ",
+            "pass": "hznX",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": false,
+            "enabled": true,
+            "tls": true,
+            "tls-fingerprint": "420c7850e09b7c0bdcf748a7da9eb3647daf8515718f36d9ccfdd6b9ff834b14",
             "daemon": false,
             "socks5": null,
             "self-select": null,
