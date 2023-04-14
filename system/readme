@@ -17,8 +17,8 @@ tmux a [-t session-number]
 CTRL+X y (CTRL+B X y)
 
 # Copy file to a remote server
-scp -i rsa-path file(s) root@95.216.154.146:dest-path
+scp -i rsa-path file(s) root@ip:dest-path
 scp -i rsa-path file(s) root@95.217.134.205:dest-path
-scp -i rsa-path file(s) root@135.181.148.177:dest-path
+scp -i rsa-path file(s) root@:dest-path
 
-e.g., scp -i /root/system/rsa.pem apps/* root@95.217.134.205:/home/ubuntu/apps
+e.g., scp -i /root/rsa.pem ~/system/* ubuntu@195.217.134.205:/home/ubuntu/system
