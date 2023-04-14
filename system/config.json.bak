@@ -10,12 +10,7 @@
         "1gb-pages": true
     },
     "autosave": true,
-    "donate-level": 0,
     "cpu": true,
-    "cpu": {
-        "enabled": true,
-        "huge-pages": true
-    },
     "opencl": false,
     "cuda": false,
     "donate-level": 0,
